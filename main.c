@@ -19,7 +19,7 @@ static void print_md5(const char* f_name, uint8_t *md5)
 
 int main(int argc, char *argv[])
 {
-    FILE *fp = fopen("yuyang.pdf", "r");
+    FILE *fp = fopen("dummy.pdf", "r");
     // Get file size:
     fseek(fp, 0, SEEK_END);
     size_t f_size = ftell(fp);
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     md5(buf, f_size, result);
 
     // Print md5
-    print_md5("yuyang.pdf", (uint8_t *)result);
+    print_md5("dummy.pdf", (uint8_t *)result);
 
     free(buf);
     fclose(fp);
